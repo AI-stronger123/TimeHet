@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+.env
+.venv
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Training outputs
+outputs/
+log/
+checkpoints/*
+!checkpoints/pretemgh/
+!checkpoints/pretemgh/**
+*.pth
+*.ckpt
+
+# Pre-trained weights (keep in repo)
+!pre_checkpoints/
+
+# LLM weights (user-downloaded, ignored)
+LLM/*
+!LLM/.gitkeep
+
+# Data files (keep directory structure via .gitkeep)
+# Pre-trained model checkpoints inside data/ ignored by default
+data/**/*.pt
+data/**/*.pkl
+# Raw CSV/GZIP ignored by default
+data/**/*.csv
+data/**/*.csv.gz

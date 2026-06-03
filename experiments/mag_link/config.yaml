@@ -1,0 +1,52 @@
+experiment_name: "mag_link_vicuna"
+
+dataset:
+  name: "mag_link"
+  data_path: "./data/ogbn-mag/ogbn_graphs.bin"
+  mp2vec_dir: "./data/mp2vec"
+  time_window: 3
+  n_hid: 128
+  n_layers: 2
+  n_heads: 1
+  dropout: 0.2
+  norm: true
+
+encoder:
+  type: "graph_projector"
+  graph_dim: 128
+  proj_dim: 768
+
+llm:
+  type: "vicuna"
+  path: "./LLM/vicuna-7b-v1.3"
+  freeze: true
+  torch_dtype: "float16"
+
+temgh:
+  ckpt: "./checkpoints/pretemgh/mag_link.pt"
+  n_hid: 128
+  n_layers: 2
+  n_heads: 1
+  freeze: true
+
+task:
+  type: "link_prediction"
+  beta: 0.2
+
+training:
+  batch_size: 16
+  epochs: 200
+  seed: 66
+  lr: 1.0e-4
+  weight_decay: 5.0e-4
+  patience: 50
+  grad_clip: 1.0
+  max_train_per_snapshot: 600
+  max_val_per_snapshot: 600
+  max_test_per_snapshot: 600
+  max_train_snapshots_per_epoch: 20
+
+output:
+  root_dir: "./outputs"
+  save_best_only: true
+  save_every: 10
