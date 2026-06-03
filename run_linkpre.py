@@ -7,7 +7,8 @@ import argparse
 import os
 import sys
 
-# Resolve src/ relative to this script so it works regardless of CWD
+
+
 _PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
@@ -109,6 +110,7 @@ def main():
     ckpt_path = cfg.get("temgh", {}).get("ckpt")
     if ckpt_path and os.path.exists(ckpt_path):
         ckpt = torch.load(ckpt_path, map_location=device)
+
 
         # 兼容旧版 checkpoint: 0.gnn_layer.xxx -> gnn_layers.0.xxx
         def _remap(k):

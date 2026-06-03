@@ -31,7 +31,6 @@ def set_seed(seed: int = 0):
 
 
 class GraphPairDataset(Dataset):
-  使用。"""
     def __init__(self, feats, labels):
         self.feats = feats
         self.labels = labels
