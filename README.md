@@ -1,4 +1,4 @@
-# TEMGH-LLM
+# TimeHet
 
 ## Setup
 
@@ -19,7 +19,6 @@ Please download the Vicuna-7B-v1.3 checkpoints from this [link](https://huggingf
 Place datasets under `./data/`:
 - COVID: `data/covid/covid_graphs.bin`
 - MAG: `data/ogbn-mag/ogbn_graphs.bin`, `data/mp2vec/`
-  - `ogbn_graphs.bin` 超过 GitHub 单文件限制，已切分为 6 个 zip 分卷。下载后合并解压：
   ```bash
   cd data/ogbn-mag
   cat ogbn_graphs.zip.001 ogbn_graphs.zip.002 ogbn_graphs.zip.003 ogbn_graphs.zip.004 ogbn_graphs.zip.005 ogbn_graphs.zip.006 > ogbn_graphs.zip
