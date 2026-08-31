@@ -1,5 +1,7 @@
 # TimeHet
+# Temporal Heterogeneous Graph Tokenization (TimeHet)
 
+This is the code associated with the paper "Temporal Heterogeneous Graph Tokenization" accepted by ICDM 2026.
 ## Setup
 
 ```bash
