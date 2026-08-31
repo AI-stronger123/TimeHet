@@ -1,5 +1,5 @@
 # TimeHet
-# Temporal Heterogeneous Graph Tokenization (TimeHet)
+<h1 align="center">Temporal Heterogeneous Graph Tokenization (TimeHet)</h1>
 
 This is the code associated with the paper "Temporal Heterogeneous Graph Tokenization" accepted by ICDM 2026.
 ## Setup
